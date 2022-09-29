@@ -1,0 +1,127 @@
+// .advantages {
+//   display: flex;
+// }
+
+// .advantages .advantages__item {
+//   width: 270px;
+//   margin-left: 30px;
+// }
+
+// .edge__case {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   height: 120px;
+//   margin-bottom: 30px;
+//   background-color: #f5f4fa;
+//   border-radius: 4px;
+// }
+
+// .advantages .advantages__item:nth-child(1) {
+//   margin-left: 0;
+// }
+
+// .advantages-title {
+//   margin-bottom: 10px;
+//   font-size: 14px;
+//   line-height: 1.14;
+//   text-transform: uppercase;
+//   color: var(--accent-color-link);
+// }
+
+// .advantages__text {
+//   line-height: 1.71;
+//   color: var(--accen-color-proj-dir);
+// }
+
+.advantages {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media screen and (min-width: 1200px) {
+    gap: 30px;
+    flex-wrap: nowrap;
+  }
+
+  &__title {
+    text-align: center;
+    padding-bottom: 10px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: #212121;
+
+    @media screen and (min-width: 768px) {
+      text-align: left;
+    }
+  }
+}
+.advantages__item {
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+    margin-right: 30px;
+    margin-bottom: 30px;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+
+    &:nth-last-child(-n + 2) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 3 * 30px) / 4);
+    margin-right: 0;
+    margin-bottom: 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+.edge__case {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+}
+
+.advantages__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  line-height: 1.71;
+  color: var(--accen-color-proj-dir);
+}
+
+.edge__title {
+  margin-bottom: 10px;
+  text-align: center;
+
+  color: var(--main-text-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
+}

@@ -1,0 +1,238 @@
+.header {
+  border-bottom: 1px solid #ececec;
+
+  @media screen and (max-width: 767px) {
+    padding: 10px 0;
+  }
+}
+
+.header__helmet,
+.nav,
+.nav__list {
+  display: flex;
+  align-items: center;
+}
+
+.nav__list {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-left: 88px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 92px;
+  }
+}
+
+.nav__item {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.nav__link {
+  display: block;
+  position: relative;
+  padding: 32px 0;
+
+  &--active {
+    color: var(--primary-text-blue);
+  }
+
+  color: var(--accent-color-link);
+
+  transition: color 250ms var(--timing-function);
+}
+.logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+
+  color: #2196f3;
+
+  &--head {
+    color: var(--accent-color-logo);
+  }
+
+  @media screen and (min-width:1200px) {
+    font-size: 26px;
+    line-height: 31px;
+  }
+}
+
+.nav__link::after {
+  content: "";
+  display: block;
+  position: absolute;
+
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+
+  background-color: var(--primary-text-blue);
+
+  transform: scaleX(0);
+  transition: transform 250ms var(--timing-function);
+}
+
+.nav__link:hover::after,
+.nav__link:focus::after {
+  display: block;
+
+  transform: scaleX(1);
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.nav__link--active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--primary-text-blue);
+
+  transform: scaleX(1);
+}
+
+.contacts {
+  margin-left: auto;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.contacts__link {
+  @media screen and (min-width: 768px) {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+  }
+}
+
+.contacts__icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.contacts__item + .contacts__item {
+  margin-top: 10px;
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 0;
+  }
+}
+
+.contacts .contacts__item + .contacts__item {
+  @media screen and (min-width: 1200px) {
+    margin-left: 30px;
+  }
+}
+.contacts__link {
+  font-weight: 500;
+  line-height: 1.7;
+  color: var(--accen-color-proj-dir);
+  display: flex;
+  align-items: center;
+  transition-property: color;
+  transition-timing-function: var(--timing-function);
+  transition-duration: var(--transituin-duration);
+  &:hover,
+  :focus {
+    fill: var(--primary-text-blue);
+    color: var(--primary-text-blue);
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 10px;
+  }
+}
+
+.contacts__icon--mail {
+  @media screen and (max-width: 1199px) {
+    width: 14px;
+    height: 10px;
+  }
+}
+
+.contacts__icon--phone {
+  @media screen and (max-width: 1199px) {
+    width: 10px;
+    height: 14px;
+  }
+}
+.button-mobile {
+  margin-left: auto;
+  padding: 0;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  border: none;
+  fill: #000;
+  background-color: var(--primary-text-white);
+
+  transition: fill 250ms var(--timing-function);
+
+  &:active {
+    fill: var(--primary-text-blue);
+  }
+}
+.mobile__button-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 30px;
+  height: 30px;
+  padding: 0;
+
+  background-color: #fff;
+  border: none;
+  border-radius: 50px;
+
+  transition: fill 250ms var(--timing-function);
+
+  cursor: pointer;
+
+  &:active {
+    fill: var(--primary-text-blue);
+  }
+}

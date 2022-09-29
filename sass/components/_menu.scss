@@ -1,0 +1,123 @@
+.menu-btn {
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  color: var(--primary-text-color);
+  transition-property: color 250ms var(--transition-timing-function);
+
+  &-icon {
+    fill: currentColor;
+  }
+  &:active {
+    color: var(--primary-text-blue);
+  }
+}
+.menu-container {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100vw;
+  height: 100vh;
+  padding: 10px 15px 48px 40px;
+  transform: translateX(-100%);
+  transition: transform 250ms var(--timing-function);
+
+  &.is-open {
+    transform: translateX(0);
+    transition: transform 250ms var(--timing-function);
+  }
+
+  flex-direction: column;
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+    0px 1px 3px rgba(0, 0, 0, 0.16);
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+}
+.menu-toggle {
+  top: 10px;
+  right: 15px;
+}
+.mobile-nav {
+  margin-bottom: auto;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+
+  &__link {
+    color: var(--accent-color-link);
+  }
+  
+  &__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+  & .current {
+    color: var(--primary-text-blue);
+  }
+}
+.mobile-contacts {
+  &__item-tel {
+    margin-bottom: 32px;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+    color: var(--accent-color);
+  }
+  &__item-email {
+    margin-bottom: 64px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    color: var(--text-color);
+  }
+
+  &__link {
+    color: var(--primary-text-blue);
+
+    &--mail {
+      color: var(--accen-color-proj-dir);
+    }
+  }
+}
+.mobile-socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  &__item {
+    position: relative;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    color: var(--accent-color);
+  }
+  &__item:not(:first-child)::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    width: 1px;
+    height: 22px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(33, 33, 33, 0.2);
+  }
+
+  &__link {
+    color: var(--primary-text-blue);
+  }
+}
